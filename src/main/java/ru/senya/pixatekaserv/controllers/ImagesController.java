@@ -36,9 +36,11 @@ public class ImagesController {
         SERVER_PORT = String.valueOf(serverProperties.getPort());
 //        SERVER_IP = new BufferedReader(new InputStreamReader(new URL("https://api.ipify.org").openStream())).readLine();
 //        SERVER_IP = InetAddress.getLoopbackAddress().getHostAddress();
-        SERVER_IP = "192.168.50.20";
-        SERVER_HOST = SERVER_IP + ":" + SERVER_PORT;
+//        SERVER_IP = "192.168.50.20";
+//        SERVER_HOST = SERVER_IP + ":" + SERVER_PORT;
+        SERVER_HOST="localhost:8080";
         logger.info("Running on: " + SERVER_HOST);
+
     }
 
     @GetMapping("/images")

@@ -41,6 +41,6 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.33'
 
     // opencv
-    implementation files('C:/opencv/build/java/opencv-348.jar')
+    implementation files('C:/opencv4.6.0/opencv/build/java/opencv-460.jar')
 }
 

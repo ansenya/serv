@@ -1,13 +1,61 @@
-<form th:action="@{/users/save}"
-      th:object="${user}" method="post"
-      enctype="multipart/form-data"
->
-    ...
-    <div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Моя форма</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-        <label>Photos: </label>
-        <input type="file" name="image" accept="image/png, image/jpeg"/>
+        .form-wrapper {
+            width: 400px; /* Ширина вашей формы */
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        /* CSS-код стилей */
+        .form-wrapper {
+            margin: 20px;
+        }
 
-    </div>
-    ...
-</form>
+        .form-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .file-input {
+            margin-bottom: 10px;
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<!-- Ваша форма -->
+<div class="form-wrapper">
+    <h2 class="form-title">Загрузка файла</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input class="file-input" type="file" name="file"/>
+        <button class="submit-button" type="submit">Отправить</button>
+    </form>
+
+</div>
+</body>
+</html>
